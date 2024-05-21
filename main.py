@@ -42,9 +42,6 @@ class MataKuliah:
         self.nama = nama
         self.sks = sks
 
-    def tampilkan_info(self):
-        print(f"Mata Kuliah: {self.nama}, SKS: {self.sks}")
-
 ai = MataKuliah('AI', 3)
 pbo = MataKuliah('PBO', 4)
 
