@@ -5,9 +5,6 @@ class Mahasiswa:
         self.npm = npm
         self.nilai = {}
 
-    def tampilkan_nama_nim(self):
-        print(f"Nama: {self.nama}, NIM: {self.npm}")
-
     def tambah_nilai(self, mata_kuliah, nilai):
         if mata_kuliah.nama in self.nilai:
             self.nilai[mata_kuliah.nama] += nilai
@@ -21,7 +18,7 @@ class Mahasiswa:
                 self.nilai[mata_kuliah.nama] = 0
 
     def tampilkan_nilai(self):
-        print(f"Nilai untuk {self.nama} (NIM: {self.npm}):")
+        print(f"Nilai untuk {self.nama} (NPM: {self.npm}):")
         for mata_kuliah, nilai in self.nilai.items():
             print(f"{mata_kuliah}: {nilai}")
 
@@ -30,9 +27,6 @@ class Dosen:
     def __init__(self, nama, nip):
         self.nama = nama
         self.nip = nip
-
-    def tampilkan_nama_nip(self):
-        print(f"Nama: {self.nama}, NIP: {self.nip}")
 
     def tambah_nilai_mahasiswa(self, mahasiswa, mata_kuliah, nilai):
         print(f"{self.nama} menambahkan nilai {nilai} untuk {mata_kuliah.nama} pada mahasiswa {mahasiswa.nama}")
